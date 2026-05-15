@@ -31,6 +31,9 @@ return (
 
     {/* Chat area */}
     <div className="flex-1 overflow-hidden">
+      <style>{`
+  #chatkit-header .d091K { display: none !important; }
+`}</style>
       <ChatKit control={chatkit.control} className="h-full w-full" />
     </div>
   </div>
