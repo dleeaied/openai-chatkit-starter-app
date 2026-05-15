@@ -11,31 +11,38 @@ export function ChatKitPanel() {
   const chatkit = useChatKit({
     api: { getClientSecret },
 
-    history: { enabled: false },  // ✅ removes thread/history titles
+    // Keep history enabled so the start greeting screen still works
+    // (Disabling history can remove the greeting experience in some ChatKit builds.)
+    // history: { enabled: true },
 
-    // ✅ Change the first message shown before the user types
     startScreen: {
       greeting:
         "Hi there, explorer! My name is 🧭 Scout, and I’ll be your guide as we travel through history together. Please say hi!",
     },
 
-    // ✅ Optional: change the text inside the input box
     composer: {
       placeholder: "Type your question for Maime here…",
     },
   });
 
-return (
-  <div className="flex h-[90vh] w-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-colors dark:bg-slate-900">
-    {/* Your custom header */}
-    <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4 dark:border-slate-700">
-      <div className="text-lg font-semibold">Talk with Maime Tape</div>
-    </div>
+  return (
+    <div className="flex h-[90vh] w-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-colors dark:bg-slate-900">
+      {/* Hide ONLY the ChatKit header title text, keep the buttons (New chat, History) */}
+      <style>{`
+        #chatkit-header .Q8u4H {
+          display: none !important;
+        }
+      `}</style>
 
-    {/* Chat area */}
-    <div className="flex-1 overflow-hidden">
-      <ChatKit control={chatkit.control} className="h-full w-full" />
+      {/* Your custom header */}
+      <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4 dark:border-slate-700">
+        <div className="text-lg font-semibold">Talk with Maime Tape</div>
+      </div>
+
+      {/* Chat area */}
+      <div className="flex-1 overflow-hidden">
+        <ChatKit control={chatkit.control} className="h-full w-full" />
+      </div>
     </div>
-  </div>
-);
+  );
 }
