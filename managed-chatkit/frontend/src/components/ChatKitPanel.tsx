@@ -20,9 +20,6 @@ export function ChatKitPanel() {
     composer: {
       placeholder: "Type your question for Maime here…",
     },
-
-    history: { enabled: false },  // ✅ removes thread/history titles
-
   });
 
 return (
