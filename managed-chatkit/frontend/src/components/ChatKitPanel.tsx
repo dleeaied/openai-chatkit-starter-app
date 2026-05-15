@@ -10,6 +10,17 @@ export function ChatKitPanel() {
 
   const chatkit = useChatKit({
     api: { getClientSecret },
+
+    // ✅ Change the first message shown before the user types
+    startScreen: {
+      greeting:
+        "Hi there, explorer! Welcome! My name is 🧭 Scout, and I’ll be your guide as we travel through history together.",
+    },
+
+    // ✅ Optional: change the text inside the input box
+    composer: {
+      placeholder: "Type your question for Maime here…",
+    },
   });
 
   return (
