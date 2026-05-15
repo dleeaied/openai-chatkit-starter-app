@@ -10,7 +10,10 @@ export function ChatKitPanel() {
 
   const chatkit = useChatKit({
     api: { getClientSecret },
-
+    
+  // ✅ Hide ChatKit’s built-in header (removes “Friendly AI Greeting”)
+  header: { enabled: false },
+    
     // ✅ Change the first message shown before the user types
     startScreen: {
       greeting:
