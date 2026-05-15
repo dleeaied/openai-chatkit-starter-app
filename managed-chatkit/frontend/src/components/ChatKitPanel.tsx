@@ -1,5 +1,3 @@
-See how you can fix this. give me the entire code that I can replace this: 
-
 import { useMemo } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import { createClientSecretFetcher, workflowId } from "../lib/chatkitSession";
@@ -22,6 +20,9 @@ export function ChatKitPanel() {
     composer: {
       placeholder: "Type your question for Maime here…",
     },
+
+    history: { enabled: false },  // ✅ removes thread/history titles
+
   });
 
 return (
