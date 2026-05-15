@@ -32,3 +32,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Hide the ChatKit thread title like "AI Assistant and User Dialogue" */
+.Q8u4H {
+  display: none !important;
+}
