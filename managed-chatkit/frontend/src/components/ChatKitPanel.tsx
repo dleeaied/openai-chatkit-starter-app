@@ -26,7 +26,7 @@ return (
   <div className="flex h-[90vh] w-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-colors dark:bg-slate-900">
     {/* Your custom header */}
     <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4 dark:border-slate-700">
-      <div className="text-lg font-semibold">Talk with Maime Tape</div>
+      <div className="text-lg font-semibold">Talk with Mamie Tape</div>
     </div>
 
     {/* Chat area */}
