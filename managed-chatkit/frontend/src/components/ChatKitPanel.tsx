@@ -18,7 +18,7 @@ export function ChatKitPanel() {
 
     // ✅ Optional: change the text inside the input box
     composer: {
-      placeholder: "Type your question for Maime here…",
+      placeholder: "Type your question for Mamie here…",
     },
   });
 
