@@ -14,7 +14,7 @@ export function ChatKitPanel() {
     // ✅ Change the first message shown before the user types
     startScreen: {
       greeting:
-        "Hi there, explorer! Welcome! My name is 🧭 Scout, and I’ll be your guide as we travel through history together.",
+        "Hi there, explorer! My name is 🧭 Scout, and I’ll be your guide as we travel through history together. Please say hi!",
     },
 
     // ✅ Optional: change the text inside the input box
