@@ -10,7 +10,7 @@ export function ChatKitPanel() {
 
   const chatkit = useChatKit({
     api: { getClientSecret },
-       
+
     // ✅ Change the first message shown before the user types
     startScreen: {
       greeting:
@@ -24,13 +24,16 @@ export function ChatKitPanel() {
   });
 
 return (
+  <div className="flex h-[90vh] w-full flex-col rounded-2xl bg-white shadow-sm transition-colors dark:bg-slate-900">
   <div className="flex h-[90vh] w-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-colors dark:bg-slate-900">
     {/* Your custom header */}
+    <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200 dark:border-slate-700">
     <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4 dark:border-slate-700">
       <div className="text-lg font-semibold">Talk with Maime Tape</div>
     </div>
 
     {/* Chat area */}
+    <div className="flex-1">
     <div className="flex-1 overflow-hidden">
       <ChatKit control={chatkit.control} className="h-full w-full" />
     </div>
