@@ -11,6 +11,8 @@ export function ChatKitPanel() {
   const chatkit = useChatKit({
     api: { getClientSecret },
 
+    history: { enabled: false },  // ✅ removes thread/history titles
+
     // ✅ Change the first message shown before the user types
     startScreen: {
       greeting:
