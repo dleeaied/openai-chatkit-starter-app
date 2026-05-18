@@ -10,6 +10,12 @@ export function ChatKitPanel() {
 
   const chatkit = useChatKit({
     api: { getClientSecret },
+
+    // ✅ Hide only the built-in ChatKit title ("Title") but keep other header behavior (if any)
+    header: {
+      title: { enabled: false },
+    },
+    
     // ✅ Change the first message shown before the user types
     startScreen: {
       greeting:
